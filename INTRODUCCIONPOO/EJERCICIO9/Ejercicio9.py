@@ -2,13 +2,13 @@ class Computadora:
     def __init__(self, procesador, ram, disco_duro):
         self.__procesador = procesador
         self.__ram = ram
-        self.__disco_duro = disco_duro
+        self.__discoDuro = disco_duro
         self.__encendida = False
 
-    def mostrar_componentes(self):
+    def mostrarComponentes(self):
         print(f"Procesador: {self.__procesador}")
         print(f"RAM: {self.__ram}")
-        print(f"Disco Duro: {self.__disco_duro}")
+        print(f"Disco Duro: {self.__discoDuro}")
 
     def encender(self):
         self.__encendida = True
@@ -22,7 +22,7 @@ class Computadora:
         print("Estado:", "Encendida" if self.__encendida else "Apagada")
 
 pc = Computadora("Intel i7", "16GB", "1TB")
-pc.mostrar_componentes()
+pc.mostrarComponentes()
 pc.estado()
 pc.encender()
 pc.estado()
