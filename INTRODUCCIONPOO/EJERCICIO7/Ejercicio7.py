@@ -7,7 +7,7 @@ class Celular:
 
     def configurar(self, espacio: int, maxApps: int, bateria: float):
         self.__espacioDisponible = espacio
-        self.__maxAplicaciones = max_apps
+        self.__maxAplicaciones = maxApps
         self.__bateria = bateria
 
     def instalarAplicacion(self, nombre: str, tamano: int):
