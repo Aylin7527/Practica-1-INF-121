@@ -6,19 +6,16 @@ public class Ejercicio1 {
         private String plataforma;
         private int cantidadJugadores;
     
-        // Constructor
         public Videojuego(String nombre, String plataforma, int cantidadJugadores) {
             this.nombre = nombre;
             this.plataforma = plataforma;
             this.cantidadJugadores = cantidadJugadores;
         }
     
-        // Método para mostrar la información del videojuego
         public void mostrar() {
             System.out.println("Videojuego: " + nombre + ", Plataforma: " + plataforma + ", Jugadores: " + cantidadJugadores);
         }
     
-        // Método para agregar jugadores
         public void agregarJugadores(int cantidad) {
             cantidadJugadores += cantidad;
             System.out.println("Jugadores agregados. Ahora hay " + cantidadJugadores + " jugadores.");
