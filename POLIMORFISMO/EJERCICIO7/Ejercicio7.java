@@ -67,10 +67,6 @@ public class Ejercicio7 {
         Gato gato = new Gato("Garfield", 2, "Naranja");
         Pajaro pajaro = new Pajaro("Blue", 1, "Guacamayo de Spix");
 
-        System.out.println("Perro: Nombre = " + perro.nombre + ", Edad = " + perro.edad + ", Raza = " + perro.raza);
-        System.out.println("Gato: Nombre = " + gato.nombre + ", Edad = " + gato.edad + ", Color = " + gato.color);
-        System.out.println("Pájaro: Nombre = " + pajaro.nombre + ", Edad = " + pajaro.edad + ", Tipo = " + pajaro.tipo);
-
         perro.hacerSonido();
         perro.moverse();
 
