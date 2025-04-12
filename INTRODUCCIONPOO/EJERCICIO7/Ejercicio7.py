@@ -1,24 +1,24 @@
 class Celular:
     def __init__(self, aplicaciones, espacioDisponible, maxDisponibles, bateria):
         self.__aplicaciones = aplicaciones
-        self.__espacio_disponible = espacioDisponible
-        self.__max_aplicaciones = maxDisponibles
+        self.__espacioDisponible = espacioDisponible
+        self.__maxAplicaciones = maxDisponibles
         self.__bateria = bateria
 
     def configurar(self, espacio: int, max_apps: int, bateria: float):
-        self.__espacio_disponible = espacio
-        self.__max_aplicaciones = max_apps
+        self.__espacioDisponible = espacio
+        self.__maxAplicaciones = max_apps
         self.__bateria = bateria
 
-    def instalar_aplicacion(self, nombre: str, tamano: int):
-        if len(self.__aplicaciones) < self.__max_aplicaciones and tamano <= self.__espacio_disponible:
+    def instalarAplicacion(self, nombre: str, tamano: int):
+        if len(self.__aplicaciones) < self.__maxAplicaciones and tamano <= self.__espacioDisponible:
             self.__aplicaciones.append((nombre, tamano))
-            self.__espacio_disponible -= tamano
+            self.__espacioDisponible -= tamano
             print(f"Aplicación {nombre} instalada.")
         else:
             print(f"No se puede instalar {nombre}. Espacio insuficiente o límite alcanzado.")
 
-    def usar_aplicacion(self, nombre: str, minutos: int):
+    def usarAplicacion(self, nombre: str, minutos: int):
         if self.__bateria <= 0:
             print("Celular apagado")
             return
@@ -46,21 +46,21 @@ class Celular:
 
         print("Aplicación no encontrada.")
 
-    def mostrar_bateria(self):
+    def mostrarBateria(self):
         print(f"Batería restante: {self.__bateria}%")
 
 cel = Celular([], 0, 0, 0)
 cel.configurar(1024, 20, 100.0)
 
-cel.instalar_aplicacion("WhatsApp", 120)
-cel.instalar_aplicacion("Facebook", 300)
-cel.instalar_aplicacion("Notas", 50)
+cel.instalarAplicacion("WhatsApp", 120)
+cel.instalarAplicacion("Facebook", 300)
+cel.instalarAplicacion("Notas", 50)
 
-cel.usar_aplicacion("WhatsApp", 6000)
-cel.usar_aplicacion("Facebook", 8000)
-cel.usar_aplicacion("Notas", 6000)
-cel.usar_aplicacion("Facebook", 5000)
-cel.usar_aplicacion("WhatsApp", 7000)
-cel.usar_aplicacion("Notas", 4000)
+cel.usarAplicacion("WhatsApp", 6000)
+cel.usarAplicacion("Facebook", 8000)
+cel.usarAplicacion("Notas", 6000)
+cel.usarAplicacion("Facebook", 5000)
+cel.usarAplicacion("WhatsApp", 7000)
+cel.usarAplicacion("Notas", 4000)
 
-cel.mostrar_bateria()
+cel.mostrarBateria()
