@@ -6,36 +6,33 @@ public class Ejercicio3 {
         private String modelo;
         private int velocidad;
     
-        // Constructor
-        public Coche(String marca, String modelo) {
+        public Coche(String marca, String modelo, int velocidad) {
             this.marca = marca;
             this.modelo = modelo;
-            this.velocidad = 0;
+            this.velocidad = velocidad;
         }
     
-        // Método para acelerar
         public void acelerar() {
             velocidad += 10;
+            System.out.println(marca + " " + modelo + " acelera. Nueva velocidad: " + velocidad + " km/h");
         }
     
-        // Método para frenar
         public void frenar() {
             velocidad -= 5;
             if (velocidad < 0) {
                 velocidad = 0;
             }
+            System.out.println(marca + " " + modelo + " frena. Nueva velocidad: " + velocidad + " km/h");
         }
     
-        // Método para mostrar velocidad
         public void mostrarVelocidad() {
             System.out.println("El coche " + marca + " " + modelo + " va a " + velocidad + " km/h");
         }
     
         public static void main(String[] args) {
-            Coche coche1 = new Coche("Toyota", "Corolla");
-            Coche coche2 = new Coche("Ford", "Focus");
+            Coche coche1 = new Coche("Toyota", "Corolla", 50);
+            Coche coche2 = new Coche("Ford", "Focus", 30);
     
-            coche1.acelerar();
             coche1.acelerar();
             coche1.frenar();
             coche1.mostrarVelocidad();
@@ -44,6 +41,5 @@ public class Ejercicio3 {
             coche2.frenar();
             coche2.mostrarVelocidad();
         }
-    }
-    
+    }    
 }
