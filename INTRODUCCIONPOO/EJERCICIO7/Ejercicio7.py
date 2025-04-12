@@ -5,7 +5,7 @@ class Celular:
         self.__maxAplicaciones = maxDisponibles
         self.__bateria = bateria
 
-    def configurar(self, espacio: int, max_apps: int, bateria: float):
+    def configurar(self, espacio: int, maxApps: int, bateria: float):
         self.__espacioDisponible = espacio
         self.__maxAplicaciones = max_apps
         self.__bateria = bateria
